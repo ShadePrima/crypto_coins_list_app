@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(const CryptoCurrenciesListApp());
@@ -47,8 +48,13 @@ class _MyHomePageState extends State<MyHomePage> {
         title: const Text('CryptoCurrenciesList'),
       ),
       body: ListView.builder(
-          itemCount: 10,
+          itemCount: 15,
           itemBuilder: (context, index) => ListTile(
+                leading: SvgPicture.asset(
+                  'assets/svg/bitcoin_logo.svg',
+                  height: 25,
+                  width: 25,
+                ),
                 title: Text(
                   "Bitcoin",
                   style: theme.textTheme.bodyMedium,
